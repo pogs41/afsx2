@@ -1,0 +1,1553 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "Afsx Auto Train",
+    LoadingTitle = "Afsx Auto Train",
+    LoadingSubtitle = "by pogs#5168",
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = nil, -- Create a custom folder for your hub/game
+       FileName = "Auto train/PC"
+    },
+    Discord = {
+       Enabled = false,
+       Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+    },
+    KeySystem = false, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Untitled",
+       Subtitle = "Key System",
+       Note = "No method of obtaining the key is provided",
+       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+    }
+ })
+
+
+
+ local Tab = Window:CreateTab("Auto train", 4483362458) -- Title, Image
+ 
+
+
+
+ local Section = Tab:CreateSection("Auto Farm")  --- remove is this if theres a bug
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "TrainStat",
+            [2] = "Strength"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+        
+        wait(0.5) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto train Strength",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+
+
+
+
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "TrainStat",
+            [2] = "Durability"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+        
+        wait(0.5) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Train Durability",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+
+
+
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "TrainStat",
+            [2] = "Chakra"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+        
+        wait(0.5) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Train Chakra",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "TrainStat",
+            [2] = "Sword"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+        
+        wait(0.5) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto train Sword",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+
+
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "TrainStat",
+            [2] = "Speed"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+         
+        wait(0.5) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Train Speed",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+
+
+
+local Section = Tab:CreateSection("Auto Claim")  --- remove is this if theres a bug
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "ClaimHourly",
+            [2] = 1337595082
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rewards/RemoteEvent"):FireServer(unpack(args))
+        
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Claiam Free chikara every 1 hour",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+
+local Section = Tab:CreateSection("Auto Boom Quest")  --- remove is this if theres a bug
+
+
+
+
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "StartQuest",
+            [2] = "FirstQuest"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Farm boom",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+
+
+
+local Section = Tab:CreateSection("Auto Upgrade Stats")  --- remove is this if theres a bug
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "Upgrade",
+            [2] = "Strength"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer(unpack(args))
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Upgrade Strength",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+
+
+
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "Upgrade",
+            [2] = "Durability"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer(unpack(args))
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Upgrade Durability",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+
+
+
+
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "Upgrade",
+            [2] = "Chakra"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer(unpack(args))
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Upgrade Chakra",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "Upgrade",
+            [2] = "Sword"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer(unpack(args))
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Upgrade Sword",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "Upgrade",
+            [2] = "Speed"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer(unpack(args))
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Upgrade Speed",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+local Section = Tab:CreateSection("Auto Summon")  --- remove is this if theres a bug
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "Roll",
+            [2] = "Champion Capsule",
+            [3] = 1
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Champions/RemoteEvent"):FireServer(unpack(args))
+        
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto summon Champions Single only",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+local Section = Tab:CreateSection("Find low server")  --- remove is this if theres a bug
+
+local Button = Tab:CreateButton({
+    Name = "Hop to lower server, this migth bug sometimes",
+    Callback = function()
+        local Http = game:GetService("HttpService") local TPS = game:GetService("TeleportService") local Api = "https://games.roblox.com/v1/games/" local _place = game.PlaceId local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100" function ListServers(cursor) local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or "")) return Http:JSONDecode(Raw) end local Server, Next; repeat local Servers = ListServers(Next) Server = Servers.data[1] Next = Servers.nextPageCursor until Server TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+    end,
+ })
+
+
+
+ local Tab = Window:CreateTab("Teleports", 4483362458) -- Title, Image
+ local Section = Tab:CreateSection("Training Grounds")
+
+
+ local Button = Tab:CreateButton({
+    Name = "100 Strength",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-74.4714432, 57.0463638, -319.120056, 0.942451, 0.00902151316, 0.334222704, -0.0138465306, 0.999831438, 0.0120568611, -0.334057599, -0.0159908291, 0.942416966)
+    end,
+ })
+
+
+
+
+ 
+ local Button = Tab:CreateButton({
+    Name = "10K Strength",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-451.667145, 14.5680161, -300.596344, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+    end,
+ })
+
+
+
+
+ local Button = Tab:CreateButton({
+    Name = "100K Strength",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(242.390701, 11.3037548, -677.413757, 3.23057175e-05, 0.707060337, -0.707153201, -1, 3.23057175e-05, -1.33812428e-05, 1.33812428e-05, 0.707153201, 0.707060337)
+    end,
+ })
+
+
+
+
+ local Button = Tab:CreateButton({
+    Name = "1M Strength",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(395.912048, 22.0744591, -101.921761, 0.999391913, -0, -0.0348687991, 0, 1, -0, 0.0348687991, 0, 0.999391913)
+    end,
+ })
+
+
+
+ local Button = Tab:CreateButton({
+    Name = "10M Strength",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-488.724304, 29.0049934, 526.725342, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    end,
+ })
+
+
+
+ local Button = Tab:CreateButton({
+    Name = "100M Strength",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1553.05664, 59.7584343, -171.284561, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+    end,
+ })
+
+
+
+
+
+ local Button = Tab:CreateButton({
+    Name = "1B Strength",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-990.519714, 111.183273, 1739.40039, 0.985467255, -0, -0.169865474, 0, 1, -0, 0.169865474, 0, 0.985467255)
+    end,
+ })
+
+
+
+
+
+
+ local Button = Tab:CreateButton({
+    Name = "100B Strength",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1719.23096, 40.5560036, 870.237976, -0.258864403, 0, 0.965913713, 0, 1, 0, -0.965913713, 0, -0.258864403)
+    end,
+ })
+
+
+
+ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+ local Window = Rayfield:CreateWindow({
+     Name = "Afsx Auto Train",
+     LoadingTitle = "Afsx Auto Train",
+     LoadingSubtitle = "by pogs#5168",
+     ConfigurationSaving = {
+        Enabled = true,
+        FolderName = nil, -- Create a custom folder for your hub/game
+        FileName = "Auto train/PC"
+     },
+     Discord = {
+        Enabled = false,
+        Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+        RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+     },
+     KeySystem = false, -- Set this to true to use our key system
+     KeySettings = {
+        Title = "Untitled",
+        Subtitle = "Key System",
+        Note = "No method of obtaining the key is provided",
+        FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+        SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+        GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+        Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+     }
+  })
+ 
+ 
+ 
+  local Tab = Window:CreateTab("Auto train", 4483362458) -- Title, Image
+  
+ 
+ 
+ 
+  local Section = Tab:CreateSection("Auto Farm")  --- remove is this if theres a bug
+ local isToggled = false
+ 
+ local function performLoop()
+     while isToggled do
+         local args = {
+             [1] = "TrainStat",
+             [2] = "Strength"
+         }
+         
+         game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+         
+         wait(1) -- waits for 1 second or any duration you want
+     end
+ end
+ 
+ local Toggle = Tab:CreateToggle({
+     Name = "Auto train Strength",
+     CurrentValue = false,
+     Flag = "Toggle1",
+     Callback = function(Value)
+         isToggled = Value
+         if Value then
+             performLoop() -- This will start the loop when the toggle is ON
+         end
+     end,
+ })
+ 
+ 
+ 
+ 
+ 
+ 
+ local isToggled = false
+ 
+ local function performLoop()
+     while isToggled do
+         local args = {
+             [1] = "TrainStat",
+             [2] = "Durability"
+         }
+         
+         game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+         
+         wait(1) -- waits for 1 second or any duration you want
+     end
+ end
+ 
+ local Toggle = Tab:CreateToggle({
+     Name = "Auto Train Durability",
+     CurrentValue = false,
+     Flag = "Toggle1",
+     Callback = function(Value)
+         isToggled = Value
+         if Value then
+             performLoop() -- This will start the loop when the toggle is ON
+         end
+     end,
+ })
+ 
+ 
+ 
+ 
+ 
+ local isToggled = false
+ 
+ local function performLoop()
+     while isToggled do
+         local args = {
+             [1] = "TrainStat",
+             [2] = "Chakra"
+         }
+         
+         game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+         
+         wait(1) -- waits for 1 second or any duration you want
+     end
+ end
+ 
+ local Toggle = Tab:CreateToggle({
+     Name = "Auto Train Chakra",
+     CurrentValue = false,
+     Flag = "Toggle1",
+     Callback = function(Value)
+         isToggled = Value
+         if Value then
+             performLoop() -- This will start the loop when the toggle is ON
+         end
+     end,
+ })
+ 
+ 
+ local isToggled = false
+ 
+ local function performLoop()
+     while isToggled do
+         local args = {
+             [1] = "TrainStat",
+             [2] = "Sword"
+         }
+         
+         game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+         
+         wait(1) -- waits for 1 second or any duration you want
+     end
+ end
+ 
+ local Toggle = Tab:CreateToggle({
+     Name = "Auto train Sword",
+     CurrentValue = false,
+     Flag = "Toggle1",
+     Callback = function(Value)
+         isToggled = Value
+         if Value then
+             performLoop() -- This will start the loop when the toggle is ON
+         end
+     end,
+ })
+ 
+ 
+ 
+ 
+ local isToggled = false
+ 
+ local function performLoop()
+     while isToggled do
+         local args = {
+             [1] = "TrainStat",
+             [2] = "Speed"
+         }
+         
+         game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+          
+         wait(1) -- waits for 1 second or any duration you want
+     end
+ end
+ 
+ local Toggle = Tab:CreateToggle({
+     Name = "Auto Train Speed",
+     CurrentValue = false,
+     Flag = "Toggle1",
+     Callback = function(Value)
+         isToggled = Value
+         if Value then
+             performLoop() -- This will start the loop when the toggle is ON
+         end
+     end,
+ })
+ 
+ 
+ 
+ 
+ 
+ local Section = Tab:CreateSection("Auto Claim")  --- remove is this if theres a bug
+ local isToggled = false
+ 
+ local function performLoop()
+     while isToggled do
+         local args = {
+             [1] = "ClaimHourly",
+             [2] = 1337595082
+         }
+         
+         game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rewards/RemoteEvent"):FireServer(unpack(args))
+         
+         
+         wait(1) -- waits for 1 second or any duration you want
+     end
+ end
+ 
+ local Toggle = Tab:CreateToggle({
+     Name = "Auto Claiam Free chikara every 1 hour",
+     CurrentValue = false,
+     Flag = "Toggle1",
+     Callback = function(Value)
+         isToggled = Value
+         if Value then
+             performLoop() -- This will start the loop when the toggle is ON
+         end
+     end,
+ })
+ 
+ 
+ 
+ local Section = Tab:CreateSection("Auto Boom Quest")  --- remove is this if theres a bug
+ 
+ 
+ 
+ 
+ local isToggled = false
+ 
+ local function performLoop()
+     while isToggled do
+         local args = {
+             [1] = "StartQuest",
+             [2] = "FirstQuest"
+         }
+         
+         game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+         
+         wait(1) -- waits for 1 second or any duration you want
+     end
+ end
+ 
+ local Toggle = Tab:CreateToggle({
+     Name = "Auto Farm boom",
+     CurrentValue = false,
+     Flag = "Toggle1",
+     Callback = function(Value)
+         isToggled = Value
+         if Value then
+             performLoop() -- This will start the loop when the toggle is ON
+         end
+     end,
+ })
+ 
+ 
+ 
+ 
+ 
+ local Section = Tab:CreateSection("Auto Upgrade Stats")  --- remove is this if theres a bug
+ local isToggled = false
+ 
+ local function performLoop()
+     while isToggled do
+         local args = {
+             [1] = "Upgrade",
+             [2] = "Strength"
+         }
+         
+         game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer(unpack(args))
+         
+         wait(1) -- waits for 1 second or any duration you want
+     end
+ end
+ 
+ local Toggle = Tab:CreateToggle({
+     Name = "Auto Upgrade Strength",
+     CurrentValue = false,
+     Flag = "Toggle1",
+     Callback = function(Value)
+         isToggled = Value
+         if Value then
+             performLoop() -- This will start the loop when the toggle is ON
+         end
+     end,
+ })
+ 
+ 
+ 
+ 
+ 
+ local isToggled = false
+ 
+ local function performLoop()
+     while isToggled do
+         local args = {
+             [1] = "Upgrade",
+             [2] = "Durability"
+         }
+         
+         game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer(unpack(args))
+         
+         wait(1) -- waits for 1 second or any duration you want
+     end
+ end
+ 
+ local Toggle = Tab:CreateToggle({
+     Name = "Auto Upgrade Durability",
+     CurrentValue = false,
+     Flag = "Toggle1",
+     Callback = function(Value)
+         isToggled = Value
+         if Value then
+             performLoop() -- This will start the loop when the toggle is ON
+         end
+     end,
+ })
+ 
+ 
+ 
+ 
+ 
+ 
+ local isToggled = false
+ 
+ local function performLoop()
+     while isToggled do
+         local args = {
+             [1] = "Upgrade",
+             [2] = "Chakra"
+         }
+         
+         game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer(unpack(args))
+         
+         wait(1) -- waits for 1 second or any duration you want
+     end
+ end
+ 
+ local Toggle = Tab:CreateToggle({
+     Name = "Auto Upgrade Chakra",
+     CurrentValue = false,
+     Flag = "Toggle1",
+     Callback = function(Value)
+         isToggled = Value
+         if Value then
+             performLoop() -- This will start the loop when the toggle is ON
+         end
+     end,
+ })
+ 
+ 
+ 
+ local isToggled = false
+ 
+ local function performLoop()
+     while isToggled do
+         local args = {
+             [1] = "Upgrade",
+             [2] = "Sword"
+         }
+         
+         game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer(unpack(args))
+         
+         wait(1) -- waits for 1 second or any duration you want
+     end
+ end
+ 
+ local Toggle = Tab:CreateToggle({
+     Name = "Auto Upgrade Sword",
+     CurrentValue = false,
+     Flag = "Toggle1",
+     Callback = function(Value)
+         isToggled = Value
+         if Value then
+             performLoop() -- This will start the loop when the toggle is ON
+         end
+     end,
+ })
+ 
+ local isToggled = false
+ 
+ local function performLoop()
+     while isToggled do
+         local args = {
+             [1] = "Upgrade",
+             [2] = "Speed"
+         }
+         
+         game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer(unpack(args))
+         
+         wait(1) -- waits for 1 second or any duration you want
+     end
+ end
+ 
+ local Toggle = Tab:CreateToggle({
+     Name = "Auto Upgrade Speed",
+     CurrentValue = false,
+     Flag = "Toggle1",
+     Callback = function(Value)
+         isToggled = Value
+         if Value then
+             performLoop() -- This will start the loop when the toggle is ON
+         end
+     end,
+ })
+ 
+ 
+ local Section = Tab:CreateSection("Auto Summon")  --- remove is this if theres a bug
+ local isToggled = false
+ 
+ local function performLoop()
+     while isToggled do
+         local args = {
+             [1] = "Roll",
+             [2] = "Champion Capsule",
+             [3] = 1
+         }
+         
+         game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Champions/RemoteEvent"):FireServer(unpack(args))
+         
+         
+         wait(1) -- waits for 1 second or any duration you want
+     end
+ end
+ 
+ local Toggle = Tab:CreateToggle({
+     Name = "Auto summon Champions Single only",
+     CurrentValue = false,
+     Flag = "Toggle1",
+     Callback = function(Value)
+         isToggled = Value
+         if Value then
+             performLoop() -- This will start the loop when the toggle is ON
+         end
+     end,
+ })
+ 
+ 
+ local Section = Tab:CreateSection("Find low server")  --- remove is this if theres a bug
+ 
+ local Button = Tab:CreateButton({
+     Name = "Hop to lower server, this migth bug sometimes",
+     Callback = function()
+         local Http = game:GetService("HttpService") local TPS = game:GetService("TeleportService") local Api = "https://games.roblox.com/v1/games/" local _place = game.PlaceId local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100" function ListServers(cursor) local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or "")) return Http:JSONDecode(Raw) end local Server, Next; repeat local Servers = ListServers(Next) Server = Servers.data[1] Next = Servers.nextPageCursor until Server TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+     end,
+  })
+ 
+ 
+ 
+  local Tab = Window:CreateTab("Teleports", 4483362458) -- Title, Image
+  local Section = Tab:CreateSection("Training Grounds")
+ 
+ 
+  local Button = Tab:CreateButton({
+     Name = "100 Strength",
+     Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-74.4714432, 57.0463638, -319.120056, 0.942451, 0.00902151316, 0.334222704, -0.0138465306, 0.999831438, 0.0120568611, -0.334057599, -0.0159908291, 0.942416966)
+     end,
+  })
+ 
+ 
+ 
+ 
+  
+  local Button = Tab:CreateButton({
+     Name = "10K Strength",
+     Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-451.667145, 14.5680161, -300.596344, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+     end,
+  })
+ 
+ 
+ 
+ 
+  local Button = Tab:CreateButton({
+     Name = "100K Strength",
+     Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(242.390701, 11.3037548, -677.413757, 3.23057175e-05, 0.707060337, -0.707153201, -1, 3.23057175e-05, -1.33812428e-05, 1.33812428e-05, 0.707153201, 0.707060337)
+     end,
+  })
+ 
+ 
+ 
+ 
+  local Button = Tab:CreateButton({
+     Name = "1M Strength",
+     Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(395.912048, 22.0744591, -101.921761, 0.999391913, -0, -0.0348687991, 0, 1, -0, 0.0348687991, 0, 0.999391913)
+     end,
+  })
+ 
+ 
+ 
+  local Button = Tab:CreateButton({
+     Name = "10M Strength",
+     Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-488.724304, 29.0049934, 526.725342, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+     end,
+  })
+ 
+ 
+ 
+  local Button = Tab:CreateButton({
+     Name = "100M Strength",
+     Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1553.05664, 59.7584343, -171.284561, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+     end,
+  })
+ 
+ 
+ 
+ 
+ 
+  local Button = Tab:CreateButton({
+     Name = "1B Strength",
+     Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-990.519714, 111.183273, 1739.40039, 0.985467255, -0, -0.169865474, 0, 1, -0, 0.169865474, 0, 0.985467255)
+     end,
+  })
+ 
+ 
+ 
+ 
+ 
+ 
+  local Button = Tab:CreateButton({
+     Name = "100B Strength",
+     Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1719.23096, 40.5560036, 870.237976, -0.258864403, 0, 0.965913713, 0, 1, 0, -0.965913713, 0, -0.258864403)
+     end,
+  })
+ 
+ 
+ 
+ 
+ 
+  local Button = Tab:CreateButton({
+     Name = "100 Durability",
+     Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(640.094788, 31.3790283, -111.974648, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+     end,
+  })
+ 
+ 
+ 
+ 
+ 
+  local Button = Tab:CreateButton({
+     Name = "10K Durability",
+     Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-184.765793, 36.2128983, 243.847656, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+     end,
+  })
+ 
+ 
+  local Button = Tab:CreateButton({
+     Name = "100K Durability",
+     Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1284.81531, 27.1992378, -309.127991, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+     end,
+  })
+ 
+ 
+ 
+  local Button = Tab:CreateButton({
+     Name = "1M Durability",
+     Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(520.457458, 96.012207, -2655.03931, -0.606881857, 0, 0.794792116, 0, 1, 0, -0.794792116, 0, -0.606881857)
+     end,
+  })
+ 
+ 
+ 
+ 
+  local Button = Tab:CreateButton({
+     Name = "100M Durability",
+     Callback = function()
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1716.58105, 1051.04724, 808.403992, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+     end,
+  })
+ 
+  
+ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "Afsx Auto Train",
+    LoadingTitle = "Afsx Auto Train",
+    LoadingSubtitle = "by pogs#5168",
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = nil, -- Create a custom folder for your hub/game
+       FileName = "Auto train/PC"
+    },
+    Discord = {
+       Enabled = false,
+       Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+    },
+    KeySystem = false, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Untitled",
+       Subtitle = "Key System",
+       Note = "No method of obtaining the key is provided",
+       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+    }
+ })
+
+
+
+ local Tab = Window:CreateTab("Auto train", 4483362458) -- Title, Image
+ 
+
+
+
+ local Section = Tab:CreateSection("Auto Farm")  --- remove is this if theres a bug
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "TrainStat",
+            [2] = "Strength"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto train Strength",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+
+
+
+
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "TrainStat",
+            [2] = "Durability"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Train Durability",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+
+
+
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "TrainStat",
+            [2] = "Chakra"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Train Chakra",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "TrainStat",
+            [2] = "Sword"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto train Sword",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+
+
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "TrainStat",
+            [2] = "Speed"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteFunction"):InvokeServer(unpack(args))
+         
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Train Speed",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+
+
+
+local Section = Tab:CreateSection("Auto Claim")  --- remove is this if theres a bug
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "ClaimHourly",
+            [2] = 1337595082
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rewards/RemoteEvent"):FireServer(unpack(args))
+        
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Claiam Free chikara every 1 hour",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+
+local Section = Tab:CreateSection("Auto Boom Quest")  --- remove is this if theres a bug
+
+
+
+
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "StartQuest",
+            [2] = "FirstQuest"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Quests/RemoteEvent"):FireServer(unpack(args))
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Farm boom",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+
+
+
+local Section = Tab:CreateSection("Auto Upgrade Stats")  --- remove is this if theres a bug
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "Upgrade",
+            [2] = "Strength"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer(unpack(args))
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Upgrade Strength",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+
+
+
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "Upgrade",
+            [2] = "Durability"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer(unpack(args))
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Upgrade Durability",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+
+
+
+
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "Upgrade",
+            [2] = "Chakra"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer(unpack(args))
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Upgrade Chakra",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "Upgrade",
+            [2] = "Sword"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer(unpack(args))
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Upgrade Sword",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "Upgrade",
+            [2] = "Speed"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Stats/RemoteEvent"):FireServer(unpack(args))
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto Upgrade Speed",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+local Section = Tab:CreateSection("Auto Summon")  --- remove is this if theres a bug
+local isToggled = false
+
+local function performLoop()
+    while isToggled do
+        local args = {
+            [1] = "Roll",
+            [2] = "Champion Capsule",
+            [3] = 1
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Champions/RemoteEvent"):FireServer(unpack(args))
+        
+        
+        wait(1) -- waits for 1 second or any duration you want
+    end
+end
+
+local Toggle = Tab:CreateToggle({
+    Name = "Auto summon Champions Single only",
+    CurrentValue = false,
+    Flag = "Toggle1",
+    Callback = function(Value)
+        isToggled = Value
+        if Value then
+            performLoop() -- This will start the loop when the toggle is ON
+        end
+    end,
+})
+
+
+local Section = Tab:CreateSection("Find low server")  --- remove is this if theres a bug
+
+local Button = Tab:CreateButton({
+    Name = "Hop to lower server, this migth bug sometimes",
+    Callback = function()
+        local Http = game:GetService("HttpService") local TPS = game:GetService("TeleportService") local Api = "https://games.roblox.com/v1/games/" local _place = game.PlaceId local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100" function ListServers(cursor) local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or "")) return Http:JSONDecode(Raw) end local Server, Next; repeat local Servers = ListServers(Next) Server = Servers.data[1] Next = Servers.nextPageCursor until Server TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+    end,
+ })
+
+
+
